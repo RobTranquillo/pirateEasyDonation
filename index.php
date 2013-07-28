@@ -10,14 +10,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+		<!--  popup / Überweisung-->	
 		<link type="text/css" href="jsPopup/popup.css"	rel="stylesheet">
 		<link type="text/css" href="jsMultiprogressbar/jquery.ui.multiprogressbar.css"	rel="stylesheet">
 		<link type="text/css" href="spenden.css" 		rel="stylesheet">
-		
-		<link rel="stylesheet" href="jsMultiprogressbar/jquery-ui-1.8.22.custom.css" />		
-	
-</head>
+
+		<!--  Multiprogressbar / Termometer-->	
+		<link rel="stylesheet" href="jsMultiprogressbar/jquery.ui.multiprogressbar.css" />
+		<link rel="stylesheet" href="jsMultiprogressbar/jquery-ui-1.8.22.custom.css" />
+	</head>
+
 <body>
+
 	<h1>Piraten Spendenseite - hostfile</h1>
 	<p>Dies ist nur eine Beispielseite die zeigt wie das Spendentool eingesetzt werden kann </p>
 	
@@ -48,12 +52,17 @@
 	$spenden->drawdonations();
 	?>
 	
-	<script src="xxjquery-2.0.3.min.js"></script>
-	<script src="jquery-1.7.2.js"></script>
+	<script src="jquery-2.0.3.min.js"></script>
+
+	<!--   popup/Überweisung -->
 	<script src="jsPopup/jquery.popup.min.js"></script>
-	<script src="jsMultiprogressbar/jquery.ui.multiprogressbar.js"></script>	
 	
+	
+	<!--  Multiprogressbar /Termometer -->
 	<script type="text/javascript" src="jsMultiprogressbar/jquery-ui-1.8.22.custom.min.js"></script>
+	<script type="text/javascript" src="jsMultiprogressbar/jquery.outerhtml.js"></script>
+	<script type="text/javascript" src="jsMultiprogressbar/jquery.ui.multiprogressbar.js"></script>			
+	
 	<script>
 		$(function(){
 
@@ -61,11 +70,9 @@
 			$('.default_popup').popup();
 
 			// Initialize the multiprogressbar
-			$('#MultiProgressBarDiv').multiprogressbar({
-				parts: [{value: 10, text: true, barClass: 'FirstPartClass'}, // First part: 10% progress, display progress, use class 'FirstPartClass' for the bar
-						{value: 20, text: 'Critical', textClass: 'redText'}, // Second part: 20% progress, display the text 'Critical', use class 'redTest' for the text
-						{value: 35, barClass: 'ThirdPartClass ExtraClass'}], // Third part: 35% progress, use classes 'ThirdPartClass' and 'ExtraClass' for the bar
-				complete: function() { alert('Full!'); } // Bind to the complete event during initialization
+			$('.MultiProgressBarDiv').multiprogressbar({
+				parts:[	{value: donation_confirmed, text: donation_confirmed_abs +'€' },
+						{value: donation_unconfirmed, text: donation_unconfirmed_abs +'€' }]
 			});
 		});
 	</script>

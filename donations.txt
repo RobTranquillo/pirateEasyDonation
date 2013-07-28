@@ -1,0 +1,3 @@
+Projekt: AParkWLAN
+confirmed: 2508
+unconfirmed: 111
