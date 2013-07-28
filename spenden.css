@@ -1,0 +1,28 @@
+.donation_wrapper
+{	
+	width:	300px;
+	height:	200px;
+	padding: 10px;
+	background-color: #58D3C1;
+}
+
+.donation_purpose
+{	
+	width: 300px;
+	border: solid black 1px;
+}
+
+.donation_thermometer
+{	
+	width: 300px;
+	border: solid black 1px;
+	background-color: #39AD9A;
+	text-align:	center;
+}
+
+.donation_kind_box
+{
+	width: 70px;
+	height: 70px;
+	border: solid black 1px;
+}
