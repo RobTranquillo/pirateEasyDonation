@@ -1,28 +1,47 @@
+body { 
+	color:#444;
+	font-family: sans-serif; 
+}
 .donation_wrapper
 {	
+    background-color:#e3e8e8;
 	width:	300px;
-	height:	200px;
+	min-height:	200px;
 	padding: 10px;
-	background-color: #58D3C1;
+	border: 1px solid rgb(64,64,64);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	overflow: hidden;
 }
 
 .donation_purpose
 {	
-	width: 300px;
-	border: solid black 1px;
+	margin-bottom: 15px;
+	padding: 5px;
+	font-size: .9em;
 }
 
 .donation_thermometer
 {	
-	width: 300px;
-	border: solid black 1px;
-	background-color: #39AD9A;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ff8800;
 	text-align:	center;
 }
 
-.donation_kind_box
+.donation_kind
 {
-	width: 70px;
-	height: 70px;
-	border: solid black 1px;
+	width: 43%;
+	min-height: 44px;
+	margin: 0 20px 10px 0;
+	float:left;
 }
+.donation_kind_transfer a {
+	text-decoration:none;
+	font-size: .6em;
+}
+
+.donation_kind:last-child { margin-right: 0; }
+.donation_kind_box img { width: 100%; }
+
+.ju-multiprogressbar-valuetext { color:#333; }

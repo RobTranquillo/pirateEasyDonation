@@ -2,7 +2,7 @@
 /*
 	Author: rob.tranquillo@gmx.de / twitter: @robtranquillo
 	licence: do what the fuck you want to do
-	version 1.0
+	version 0.5
 	
 	js: will be build in these class to be most adaptable and custumizable with class-handling
 */
@@ -58,24 +58,24 @@
 			?>
 
 <div class=donation_wrapper>
-	<div class=donation_box>
-		<div class=donation_purpose>
+	<div class="donation_box">
+		<div class="donation_purpose">
 			<?php echo $this->settings('donationspurpose'); ?>
 		</div>
-		<div class=donation_thermometer>
+		<div class="donation_thermometer">
 			<?php if($this->settings('thermometer')===true) echo $this->draw_t(); ?>
 		</div>
-		<div><center> <b>Spende jetzt mit!</b> </div>
-		<div class=donation_kind_transfer>
+		<div >Spende jetzt mit!</div>
+		<div class="donation_kind donation_kind_transfer">
 			<?php echo $this->drawdonation('transfer'); ?>
 		</div>
-		<div class=donation_kind_paypal  >
+		<div class="donation_kind donation_kind_paypal"  >
 			<?php echo $this->drawdonation('paypal'); ?>
 		</div>
-		<div class=donation_kind_flattr>
+		<div class="donation_kind donation_kind_flattr">
 			<?php echo $this->drawdonation('flattr'); ?>
 		</div>
-		<div class=donation_kind_bitcoin>
+		<div class="donation_kind donation_kind_bitcoin">
 			<?php echo $this->drawdonation('bitcoin'); ?>
 		</div>
 	</div>
@@ -91,7 +91,7 @@
 			if($kind == 'transfer' )
 			{
 				$s = '
-					<a href="#inline" class="default_popup">Über<br>weisung</a>		
+					<a href="#inline" class="default_popup"><img src="transfer.png" alt="Überweisung" /></a>		
 					<div id="inline" style="display:none">
 						<p>Überweisungstext</p>
 						<p>'.$this->settings('transfer_text').'</p>
