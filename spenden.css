@@ -35,6 +35,7 @@ body {
 	min-height: 44px;
 	margin: 0 20px 10px 0;
 	float:left;
+	cursor:pointer;
 }
 .donation_kind_transfer a {
 	text-decoration:none;
@@ -45,3 +46,23 @@ body {
 .donation_kind_box img { width: 100%; }
 
 .ju-multiprogressbar-valuetext { color:#333; }
+
+.donation_off {
+	display: none;
+}
+
+.donation_left {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.donation_send_btn {
+	cursor:pointer;
+	right: 0px;
+	width:	90px;
+	min-height:	20px;
+	padding: 10px;
+	border: 1px solid rgb(64,64,64);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
